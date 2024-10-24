@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rodar Servidor TCP",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/servidor_tcp",  // Executável do servidor
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar formatação automática do printf",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar Servidor TCP",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Rodar Cliente TCP",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/cliente_tcp",  // Executável do cliente
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar formatação automática do printf",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar Cliente TCP",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

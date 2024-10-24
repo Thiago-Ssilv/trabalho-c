@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Servidor TCP",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "servidor_tcp",    // Nome do executável
+                "servidor_tcp.c",   // Código-fonte
+                "-lws2_32"          // Linkar a biblioteca Winsock
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compilar Cliente TCP",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "cliente_tcp",     // Nome do executável
+                "cliente_tcp.c",   // Código-fonte
+                "-lws2_32"         // Linkar a biblioteca Winsock
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compilar Servidor UDP",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "servidor_udp",
+                "servidor_udp.c",
+                "-lws2_32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compilar Cliente UDP",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "cliente_udp",
+                "cliente_udp.c",
+                "-lws2_32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
